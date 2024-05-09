@@ -108,8 +108,12 @@ export default {
         }
     },
     methods: {
-        checkAnswer(id){
-            
+        checkAnswer(answer){
+            if (answer.correct === true) {
+                alert('Risposta corretta!');
+            } else {
+                alert('Risposta sbagliata!');
+            }
         }
     },
 }
@@ -132,7 +136,7 @@ export default {
                     <!-- Answers -->
                     <div class="row">
                         <div v-for="answer in question.answers" class="col-md-6 col-sm-12">
-                            <div @click='checkAnswer(answer.id)' class="my-card borders p-2 m-2">    
+                            <div @click='checkAnswer(answer)' class="my-card borders p-2 m-2">    
                                 {{ answer.text }}
                             </div>
                         </div>
