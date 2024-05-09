@@ -5,96 +5,121 @@ export default {
         return {
             questions: [
                 {
+                    id: 1,
                     question: "Qual è la capitale del Giappone?",
                     answers: [
-                        "A: Tokyo",
-                        "B: Pechino",
-                        "C: Seul",
-                        "D: Bangkok"
-                    ]
+                        { id: 1, text: "A: Tokyo" },
+                        { id: 2, text: "B: Pechino" },
+                        { id: 3, text: "C: Seul" },
+                        { id: 4, text: "D: Bangkok" }
+                    ],
+                    right_answer: { id: 1, text: "A: Tokyo" }
                 },
                 {
+                    id: 2,
                     question: "Quale è il fiume più lungo del mondo?",
                     answers: [
-                        "A: Nilo",
-                        "B: Amazonas",
-                        "C: Mississippi",
-                        "D: Yangtze"
-                    ]
+                        { id: 1, text: "A: Nilo" },
+                        { id: 2, text: "B: Amazonas" },
+                        { id: 3, text: "C: Mississippi" },
+                        { id: 4, text: "D: Yangtze" }
+                    ],
+                    right_answer: { id: 2, text: "B: Amazonas" }
                 },
                 {
+                    id: 3,
                     question: "In quale anno è stata firmata la Dichiarazione di Indipendenza degli Stati Uniti?",
                     answers: [
-                        "A: 1776",
-                        "B: 1789",
-                        "C: 1812",
-                        "D: 1865"
-                    ]
+                        { id: 1, text: "A: 1776" },
+                        { id: 2, text: "B: 1789" },
+                        { id: 3, text: "C: 1812" },
+                        { id: 4, text: "D: 1865" }
+                    ],
+                    right_answer: { id: 1, text: "A: 1776" }
                 },
                 {
+                    id: 4,
                     question: "Chi era il primo imperatore romano?",
                     answers: [
-                        "A: Augusto",
-                        "B: Cesare",
-                        "C: Nerone",
-                        "D: Tiberio"
-                    ]
+                        { id: 1, text: "A: Augusto" },
+                        { id: 2, text: "B: Cesare" },
+                        { id: 3, text: "C: Nerone" },
+                        { id: 4, text: "D: Tiberio" }
+                    ],
+                    right_answer: { id: 1, text: "A: Augusto" }
                 },
                 {
+                    id: 5,
                     question: "Qual è l'elemento chimico con simbolo H?",
                     answers: [
-                        "A: Ossigeno",
-                        "B: Idrogeno",
-                        "C: Carbonio",
-                        "D: Azoto"
-                    ]
+                        { id: 1, text: "A: Ossigeno" },
+                        { id: 2, text: "B: Idrogeno" },
+                        { id: 3, text: "C: Carbonio" },
+                        { id: 4, text: "D: Azoto" }
+                    ],
+                    right_answer: { id: 2, text: "B: Idrogeno" }
                 },
                 {
+                    id: 6,
                     question: "Chi ha scoperto la legge di gravitazione universale?",
                     answers: [
-                        "A: Galileo Galilei",
-                        "B: Isaac Newton",
-                        "C: Albert Einstein",
-                        "D: Charles Darwin"
-                    ]
+                        { id: 1, text: "A: Galileo Galilei" },
+                        { id: 2, text: "B: Isaac Newton" },
+                        { id: 3, text: "C: Albert Einstein" },
+                        { id: 4, text: "D: Charles Darwin" }
+                    ],
+                    right_answer: { id: 2, text: "B: Isaac Newton" }
                 },
                 {
+                    id: 7,
                     question: "Qual è il quadro più famoso di Leonardo da Vinci?",
                     answers: [
-                        "A: La Gioconda",
-                        "B: L'Ultima Cena",
-                        "C: Venere di Urbino",
-                        "D: La Primavera"
-                    ]
+                        { id: 1, text: "A: La Gioconda" },
+                        { id: 2, text: "B: L'Ultima Cena" },
+                        { id: 3, text: "C: Venere di Urbino" },
+                        { id: 4, text: "D: La Primavera" }
+                    ],
+                    right_answer: { id: 1, text: "A: La Gioconda" }
                 },
                 {
+                    id: 8,
                     question: "Chi è l'autore del romanzo 'Il Piccolo Principe'?",
                     answers: [
-                        "A: Antoine de Saint-Exupéry",
-                        "B: Victor Hugo",
-                        "C: Marcel Proust",
-                        "D: Ernest Hemingway"
-                    ]
+                        { id: 1, text: "A: Antoine de Saint-Exupéry" },
+                        { id: 2, text: "B: Victor Hugo" },
+                        { id: 3, text: "C: Marcel Proust" },
+                        { id: 4, text: "D: Ernest Hemingway" }
+                    ],
+                    right_answer: { id: 1, text: "A: Antoine de Saint-Exupéry" }
                 },
                 {
+                    id: 9,
                     question: "Chi è il primo ministro del Regno Unito?",
                     answers: [
-                        "A: Boris Johnson",
-                        "B: Angela Merkel",
-                        "C: Emmanuel Macron",
-                        "D: Justin Trudeau"
-                    ]
+                        { id: 1, text: "A: Boris Johnson" },
+                        { id: 2, text: "B: Angela Merkel" },
+                        { id: 3, text: "C: Emmanuel Macron" },
+                        { id: 4, text: "D: Justin Trudeau" }
+                    ],
+                    right_answer: { id: 1, text: "A: Boris Johnson" }
                 },
                 {
+                    id: 10,
                     question: "Quale presidente degli Stati Uniti ha servito per quattro mandati?",
                     answers: [
-                        "A: Franklin D. Roosevelt",
-                        "B: Abraham Lincoln",
-                        "C: George Washington",
-                        "D: Thomas Jefferson"
-                    ]
+                        { id: 1, text: "A: Franklin D. Roosevelt" },
+                        { id: 2, text: "B: Abraham Lincoln" },
+                        { id: 3, text: "C: George Washington" },
+                        { id: 4, text: "D: Thomas Jefferson" }
+                    ],
+                    right_answer: { id: 1, text: "A: Franklin D. Roosevelt" }
                 }
             ]
+        }
+    },
+    methods: {
+        checkAnswer(id){
+            
         }
     },
 }
@@ -117,8 +142,8 @@ export default {
                     <!-- Answers -->
                     <div class="row">
                         <div v-for="answer in question.answers" class="col-md-6 col-sm-12">
-                            <div class="my-card borders p-2 m-2">    
-                                {{ answer }}
+                            <div @click='checkAnswer(answer.id)' class="my-card borders p-2 m-2">    
+                                {{ answer.text }}
                             </div>
                         </div>
                     </div>
