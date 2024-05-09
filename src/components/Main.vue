@@ -8,111 +8,101 @@ export default {
                     id: 1,
                     question: "Qual è la capitale del Giappone?",
                     answers: [
-                        { id: 1, text: "A: Tokyo" },
-                        { id: 2, text: "B: Pechino" },
-                        { id: 3, text: "C: Seul" },
-                        { id: 4, text: "D: Bangkok" }
-                    ],
-                    right_answer: { id: 1, text: "A: Tokyo" }
+                        { id: 1, text: "A: Tokyo", correct: true },
+                        { id: 2, text: "B: Pechino", correct: false },
+                        { id: 3, text: "C: Seul", correct: false },
+                        { id: 4, text: "D: Bangkok", correct: false }
+                    ]
                 },
                 {
                     id: 2,
                     question: "Quale è il fiume più lungo del mondo?",
                     answers: [
-                        { id: 1, text: "A: Nilo" },
-                        { id: 2, text: "B: Amazonas" },
-                        { id: 3, text: "C: Mississippi" },
-                        { id: 4, text: "D: Yangtze" }
-                    ],
-                    right_answer: { id: 2, text: "B: Amazonas" }
+                        { id: 1, text: "A: Nilo", correct: false },
+                        { id: 2, text: "B: Amazonas", correct: true },
+                        { id: 3, text: "C: Mississippi", correct: false },
+                        { id: 4, text: "D: Yangtze", correct: false }
+                    ]
                 },
                 {
                     id: 3,
                     question: "In quale anno è stata firmata la Dichiarazione di Indipendenza degli Stati Uniti?",
                     answers: [
-                        { id: 1, text: "A: 1776" },
-                        { id: 2, text: "B: 1789" },
-                        { id: 3, text: "C: 1812" },
-                        { id: 4, text: "D: 1865" }
-                    ],
-                    right_answer: { id: 1, text: "A: 1776" }
+                        { id: 1, text: "A: 1776", correct: true },
+                        { id: 2, text: "B: 1789", correct: false },
+                        { id: 3, text: "C: 1812", correct: false },
+                        { id: 4, text: "D: 1865", correct: false }
+                    ]
                 },
                 {
                     id: 4,
                     question: "Chi era il primo imperatore romano?",
                     answers: [
-                        { id: 1, text: "A: Augusto" },
-                        { id: 2, text: "B: Cesare" },
-                        { id: 3, text: "C: Nerone" },
-                        { id: 4, text: "D: Tiberio" }
-                    ],
-                    right_answer: { id: 1, text: "A: Augusto" }
+                        { id: 1, text: "A: Augusto", correct: true },
+                        { id: 2, text: "B: Cesare", correct: false },
+                        { id: 3, text: "C: Nerone", correct: false },
+                        { id: 4, text: "D: Tiberio", correct: false }
+                    ]
                 },
                 {
                     id: 5,
                     question: "Qual è l'elemento chimico con simbolo H?",
                     answers: [
-                        { id: 1, text: "A: Ossigeno" },
-                        { id: 2, text: "B: Idrogeno" },
-                        { id: 3, text: "C: Carbonio" },
-                        { id: 4, text: "D: Azoto" }
-                    ],
-                    right_answer: { id: 2, text: "B: Idrogeno" }
+                        { id: 1, text: "A: Ossigeno", correct: false },
+                        { id: 2, text: "B: Idrogeno", correct: true },
+                        { id: 3, text: "C: Carbonio", correct: false },
+                        { id: 4, text: "D: Azoto", correct: false }
+                    ]
                 },
                 {
                     id: 6,
                     question: "Chi ha scoperto la legge di gravitazione universale?",
                     answers: [
-                        { id: 1, text: "A: Galileo Galilei" },
-                        { id: 2, text: "B: Isaac Newton" },
-                        { id: 3, text: "C: Albert Einstein" },
-                        { id: 4, text: "D: Charles Darwin" }
-                    ],
-                    right_answer: { id: 2, text: "B: Isaac Newton" }
+                        { id: 1, text: "A: Galileo Galilei", correct: false },
+                        { id: 2, text: "B: Isaac Newton", correct: true },
+                        { id: 3, text: "C: Albert Einstein", correct: false },
+                        { id: 4, text: "D: Charles Darwin", correct: false }
+                    ]
                 },
                 {
                     id: 7,
                     question: "Qual è il quadro più famoso di Leonardo da Vinci?",
                     answers: [
-                        { id: 1, text: "A: La Gioconda" },
-                        { id: 2, text: "B: L'Ultima Cena" },
-                        { id: 3, text: "C: Venere di Urbino" },
-                        { id: 4, text: "D: La Primavera" }
-                    ],
-                    right_answer: { id: 1, text: "A: La Gioconda" }
+                        { id: 1, text: "A: La Gioconda", correct: true },
+                        { id: 2, text: "B: L'Ultima Cena", correct: false },
+                        { id: 3, text: "C: Venere di Urbino", correct: false },
+                        { id: 4, text: "D: La Primavera", correct: false }
+                    ]
                 },
                 {
                     id: 8,
                     question: "Chi è l'autore del romanzo 'Il Piccolo Principe'?",
                     answers: [
-                        { id: 1, text: "A: Antoine de Saint-Exupéry" },
-                        { id: 2, text: "B: Victor Hugo" },
-                        { id: 3, text: "C: Marcel Proust" },
-                        { id: 4, text: "D: Ernest Hemingway" }
-                    ],
-                    right_answer: { id: 1, text: "A: Antoine de Saint-Exupéry" }
+                        { id: 1, text: "A: Antoine de Saint-Exupéry", correct: true },
+                        { id: 2, text: "B: Victor Hugo", correct: false },
+                        { id: 3, text: "C: Marcel Proust", correct: false },
+                        { id: 4, text: "D: Ernest Hemingway", correct: false }
+                    ]
                 },
                 {
                     id: 9,
                     question: "Chi è il primo ministro del Regno Unito?",
                     answers: [
-                        { id: 1, text: "A: Boris Johnson" },
-                        { id: 2, text: "B: Angela Merkel" },
-                        { id: 3, text: "C: Emmanuel Macron" },
-                        { id: 4, text: "D: Justin Trudeau" }
-                    ],
-                    right_answer: { id: 1, text: "A: Boris Johnson" }
+                        { id: 1, text: "A: Boris Johnson", correct: true },
+                        { id: 2, text: "B: Angela Merkel", correct: false },
+                        { id: 3, text: "C: Emmanuel Macron", correct: false },
+                        { id: 4, text: "D: Justin Trudeau", correct: false }
+                    ]
                 },
                 {
                     id: 10,
                     question: "Quale presidente degli Stati Uniti ha servito per quattro mandati?",
                     answers: [
-                        { id: 1, text: "A: Franklin D. Roosevelt" },
-                        { id: 2, text: "B: Abraham Lincoln" },
-                        { id: 3, text: "C: George Washington" },
-                        { id: 4, text: "D: Thomas Jefferson" }
-                    ],
-                    right_answer: { id: 1, text: "A: Franklin D. Roosevelt" }
+                        { id: 1, text: "A: Franklin D. Roosevelt", correct: true },
+                        { id: 2, text: "B: Abraham Lincoln", correct: false },
+                        { id: 3, text: "C: George Washington", correct: false },
+                        { id: 4, text: "D: Thomas Jefferson", correct: false }
+                    ]
                 }
             ]
         }
