@@ -6,7 +6,7 @@
 -->
 
 <script>
-// 1. import AppQualcosa from './components/AppQualcosa.vue';
+import Main from './components/Main.vue';
 
 export default {
     data() {
@@ -14,9 +14,8 @@ export default {
             
         }
     },
-    // 2. Dichiarazione dei componenti
     components: {
-        // AppQualcosa
+        Main
     }
 }
 
@@ -26,11 +25,7 @@ export default {
 <!-- --------------------------------------------------------------------------------- -->
 
 <template>
-    <div>
-        <!-- 3. <AppQualcosa/> -->
-
-
-    </div>
+    <Main />
 </template>
 
 <!-- --------------------------------------------------------------------------------- -->
