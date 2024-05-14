@@ -3,116 +3,150 @@
 export default {
     data() {
         return {
-            questions: [
+            datas: [
                 {
                     id: 1,
                     question: "Qual è la capitale del Giappone?",
                     answers: [
-                        { id: 1, text: "A: Tokyo", correct: true },
-                        { id: 2, text: "B: Pechino", correct: false },
-                        { id: 3, text: "C: Seul", correct: false },
-                        { id: 4, text: "D: Bangkok", correct: false }
-                    ]
+                        { id: 1, text: "A: Tokyo" },
+                        { id: 2, text: "B: Pechino" },
+                        { id: 3, text: "C: Seul" },
+                        { id: 4, text: "D: Bangkok" }
+                    ],
+                    correct_answer: "A: Tokyo"
                 },
                 {
                     id: 2,
                     question: "Quale è il fiume più lungo del mondo?",
                     answers: [
-                        { id: 1, text: "A: Nilo", correct: false },
-                        { id: 2, text: "B: Amazonas", correct: true },
-                        { id: 3, text: "C: Mississippi", correct: false },
-                        { id: 4, text: "D: Yangtze", correct: false }
-                    ]
+                        { id: 1, text: "A: Nilo" },
+                        { id: 2, text: "B: Amazonas" },
+                        { id: 3, text: "C: Mississippi" },
+                        { id: 4, text: "D: Yangtze" }
+                    ],
+                    correct_answer: "B: Amazonas"
                 },
                 {
                     id: 3,
                     question: "In quale anno è stata firmata la Dichiarazione di Indipendenza degli Stati Uniti?",
                     answers: [
-                        { id: 1, text: "A: 1776", correct: true },
-                        { id: 2, text: "B: 1789", correct: false },
-                        { id: 3, text: "C: 1812", correct: false },
-                        { id: 4, text: "D: 1865", correct: false }
-                    ]
+                        { id: 1, text: "A: 1776" },
+                        { id: 2, text: "B: 1789" },
+                        { id: 3, text: "C: 1812" },
+                        { id: 4, text: "D: 1865" }
+                    ],
+                    correct_answer: "A: 1776"
                 },
                 {
                     id: 4,
                     question: "Chi era il primo imperatore romano?",
                     answers: [
-                        { id: 1, text: "A: Augusto", correct: true },
-                        { id: 2, text: "B: Cesare", correct: false },
-                        { id: 3, text: "C: Nerone", correct: false },
-                        { id: 4, text: "D: Tiberio", correct: false }
-                    ]
+                        { id: 1, text: "A: Augusto" },
+                        { id: 2, text: "B: Cesare" },
+                        { id: 3, text: "C: Nerone" },
+                        { id: 4, text: "D: Tiberio" }
+                    ],
+                    correct_answer: "A: Augusto"
                 },
                 {
                     id: 5,
                     question: "Qual è l'elemento chimico con simbolo H?",
                     answers: [
-                        { id: 1, text: "A: Ossigeno", correct: false },
-                        { id: 2, text: "B: Idrogeno", correct: true },
-                        { id: 3, text: "C: Carbonio", correct: false },
-                        { id: 4, text: "D: Azoto", correct: false }
-                    ]
+                        { id: 1, text: "A: Ossigeno" },
+                        { id: 2, text: "B: Idrogeno" },
+                        { id: 3, text: "C: Carbonio" },
+                        { id: 4, text: "D: Azoto" }
+                    ],
+                    correct_answer: "B: Idrogeno"
                 },
                 {
                     id: 6,
                     question: "Chi ha scoperto la legge di gravitazione universale?",
                     answers: [
-                        { id: 1, text: "A: Galileo Galilei", correct: false },
-                        { id: 2, text: "B: Isaac Newton", correct: true },
-                        { id: 3, text: "C: Albert Einstein", correct: false },
-                        { id: 4, text: "D: Charles Darwin", correct: false }
-                    ]
+                        { id: 1, text: "A: Galileo Galilei" },
+                        { id: 2, text: "B: Isaac Newton" },
+                        { id: 3, text: "C: Albert Einstein" },
+                        { id: 4, text: "D: Charles Darwin" }
+                    ],
+                    correct_answer: "B: Isaac Newton"
                 },
                 {
                     id: 7,
                     question: "Qual è il quadro più famoso di Leonardo da Vinci?",
                     answers: [
-                        { id: 1, text: "A: La Gioconda", correct: true },
-                        { id: 2, text: "B: L'Ultima Cena", correct: false },
-                        { id: 3, text: "C: Venere di Urbino", correct: false },
-                        { id: 4, text: "D: La Primavera", correct: false }
-                    ]
+                        { id: 1, text: "A: La Gioconda" },
+                        { id: 2, text: "B: L'Ultima Cena" },
+                        { id: 3, text: "C: Venere di Urbino" },
+                        { id: 4, text: "D: La Primavera" }
+                    ],
+                    correct_answer: "A: La Gioconda"
                 },
                 {
                     id: 8,
                     question: "Chi è l'autore del romanzo 'Il Piccolo Principe'?",
                     answers: [
-                        { id: 1, text: "A: Antoine de Saint-Exupéry", correct: true },
-                        { id: 2, text: "B: Victor Hugo", correct: false },
-                        { id: 3, text: "C: Marcel Proust", correct: false },
-                        { id: 4, text: "D: Ernest Hemingway", correct: false }
-                    ]
+                        { id: 1, text: "A: Antoine de Saint-Exupéry" },
+                        { id: 2, text: "B: Victor Hugo" },
+                        { id: 3, text: "C: Marcel Proust" },
+                        { id: 4, text: "D: Ernest Hemingway" }
+                    ],
+                    correct_answer: "A: Antoine de Saint-Exupéry"
                 },
                 {
                     id: 9,
                     question: "Chi è il primo ministro del Regno Unito?",
                     answers: [
-                        { id: 1, text: "A: Boris Johnson", correct: true },
-                        { id: 2, text: "B: Angela Merkel", correct: false },
-                        { id: 3, text: "C: Emmanuel Macron", correct: false },
-                        { id: 4, text: "D: Justin Trudeau", correct: false }
-                    ]
+                        { id: 1, text: "A: Boris Johnson" },
+                        { id: 2, text: "B: Angela Merkel" },
+                        { id: 3, text: "C: Emmanuel Macron" },
+                        { id: 4, text: "D: Justin Trudeau" }
+                    ],
+                    correct_answer: "A: Boris Johnson"
                 },
                 {
                     id: 10,
                     question: "Quale presidente degli Stati Uniti ha servito per quattro mandati?",
                     answers: [
-                        { id: 1, text: "A: Franklin D. Roosevelt", correct: true },
-                        { id: 2, text: "B: Abraham Lincoln", correct: false },
-                        { id: 3, text: "C: George Washington", correct: false },
-                        { id: 4, text: "D: Thomas Jefferson", correct: false }
-                    ]
+                        { id: 1, text: "A: Franklin D. Roosevelt" },
+                        { id: 2, text: "B: Abraham Lincoln" },
+                        { id: 3, text: "C: George Washington" },
+                        { id: 4, text: "D: Thomas Jefferson" }
+                    ],
+                    correct_answer: "A: Franklin D. Roosevelt"
                 }
-            ]
+            ],
+            index: 0,
+            array: [],
+            gameOver: false,
+            uncorrectAnswer: false
         }
     },
+    mounted () {
+        // caricamento della pagina
+        this.array.push(this.datas[this.index]);
+    },
     methods: {
-        checkAnswer(answer){
-            if (answer.correct === true) {
-                alert('Risposta corretta!');
-            } else {
-                alert('Risposta sbagliata!');
+        nextQuestion () {
+            // prima rimuoviamo l'oggetto precedente
+            this.array.splice(0, 1);
+
+            // adesso mettiamo nell'array l'indice successivo
+            this.index = this.index + 1; 
+            this.array.push(this.datas[this.index]);
+        },
+        checkAnswer (answer) {
+            let myCard = document.querySelector('.my-card');
+
+            // trovo la corrispondenza con l'elemento che gli passo
+            if (this.datas[this.index].correct_answer == answer.text) {
+
+                myCard.classList.add('bg-success');
+                
+                let timeout = setTimeout(this.nextQuestion, 1000);
+
+            }
+            else {
+                this.gameOver = true;
             }
         }
     },
@@ -123,24 +157,26 @@ export default {
 
 <template>
     <div id="main-template" class="text-light">
-        <div class="my-box text-center fw-bold">
+        <div class="my-box vh-100 text-center fw-bold">
             <div class="bg-up py-5">
                 <img src="https://i.pinimg.com/474x/80/f3/e7/80f3e71a6ce9ab46b027423d056cef94.jpg">
             </div>
 
-            <div class="bg-down py-5" v-for="question in questions">
-                <div class='content container'>
-                    <!-- Question -->
-                    <p class="borders fs-4 p-3">{{ question.question }}</p>
+            <div class="bg-down py-5" >
+                <div class='content container' v-for="elem in array" v-if="gameOver == false">
+                    <p class="borders fs-4 p-3">{{ elem.question }}</p>
         
-                    <!-- Answers -->
                     <div class="row">
-                        <div v-for="answer in question.answers" class="col-md-6 col-sm-12">
-                            <div @click='checkAnswer(answer)' class="my-card borders p-2 m-2">    
+                        <div  class="col-md-6 col-sm-12">
+                            <div @click="checkAnswer(answer)" class="my-card borders p-2 m-2" v-for="answer in elem.answers">    
                                 {{ answer.text }}
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="text-light" v-else>
+                    <h1>Game Over</h1>
                 </div>
             </div>
         </div>
@@ -151,9 +187,7 @@ export default {
 
 <style scoped>
 
-    /* ---------------------------- */
-
-    .my-card:hover{
+    .my-card:hover {
         background-color: lightgray;
         cursor: pointer;
         color: black;
@@ -161,10 +195,12 @@ export default {
 
     .bg-up {
         background-color: #11138C;
+        height: 40%;
     }
 
     .bg-down {
         background-color: #11093A;
+        height: 60%;
     }
 
     .borders{
