@@ -118,12 +118,15 @@ export default {
             index: 0,
             array: [],
             gameOver: false,
-            uncorrectAnswer: false
+            resultAnswer: false,
+            countCorrectAnswers: 0
         }
     },
     mounted () {
-        // caricamento della pagina
+        // al caricamento della pagina ce il primo oggetto
         this.array.push(this.datas[this.index]);
+        console.log(this.array);
+        console.log('----------------');
     },
     methods: {
         nextQuestion () {
@@ -132,22 +135,38 @@ export default {
 
             // adesso mettiamo nell'array l'indice successivo
             this.index = this.index + 1; 
-            this.array.push(this.datas[this.index]);
+
+            if (this.index < this.datas.length) {
+                this.array.push(this.datas[this.index]);
+            }
         },
-        checkAnswer (answer) {
-            let myCard = document.querySelector('.my-card');
-
-            // trovo la corrispondenza con l'elemento che gli passo
-            if (this.datas[this.index].correct_answer == answer.text) {
-
-                myCard.classList.add('bg-success');
-                
-                let timeout = setTimeout(this.nextQuestion, 1000);
-
-            }
-            else {
+        checkAnswer (oneData, answer) {
+           if (oneData.correct_answer == answer.text) {
+                alert('Risposta esatta');
+                /* ------------------------ */
+                this.resultAnswer = true;
+                this.countCorrectAnswers++;
+                console.log(this.countCorrectAnswers);
+                /* ------------------------ */
+                this.nextQuestion();
+           } else {
+                alert('Risposta sbagliata');
+                /* ------------------------ */
+                this.countCorrectAnswers = 0;
                 this.gameOver = true;
+           } 
+        },
+        victory() {
+            if (this.countCorrectAnswers == this.datas.length) {
+                alert('Bravo, hai vinto Chi vuole essere milionario!');
             }
+        },
+        restartGame(){
+            this.gameOver = false,
+            this.resultAnswer = false,
+            this.countCorrectAnswers = 0,
+            this.nextQuestion();
+            console.log(this.array);
         }
     },
 }
@@ -163,12 +182,12 @@ export default {
             </div>
 
             <div class="bg-down py-5" >
-                <div class='content container' v-for="elem in array" v-if="gameOver == false">
-                    <p class="borders fs-4 p-3">{{ elem.question }}</p>
+                <div class='content container' v-for="oneData in array" v-if="gameOver == false">
+                    <p class="borders fs-4 p-3">{{ oneData.question }}</p>
         
                     <div class="row">
                         <div  class="col-md-6 col-sm-12">
-                            <div @click="checkAnswer(answer)" class="my-card borders p-2 m-2" v-for="answer in elem.answers">    
+                            <div @click="checkAnswer(oneData, answer)" class="my-card borders p-2 m-2" v-for="answer in oneData.answers">    
                                 {{ answer.text }}
                             </div>
                         </div>
@@ -177,6 +196,28 @@ export default {
 
                 <div class="text-light" v-else>
                     <h1>Game Over</h1>
+
+                    <div>
+                        <button @click="restartGame()">
+                            Gioca di nuovo
+                        </button>
+                    </div>
+                </div>
+
+                <div v-if="countCorrectAnswers == datas.length">
+                    <h1>Bravissimo hai vinto chi vuole essere miglionario</h1>
+
+                    <div>
+                        <button @click="restartGame()">
+                            Gioca di nuovo
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <button @click="restartGame()">
+                        Gioca di nuovo
+                    </button>
                 </div>
             </div>
         </div>
