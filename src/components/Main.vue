@@ -159,6 +159,7 @@ export default {
         },
         restartGame(){
             this.countCorrectAnswers = 0,
+            this.gameOver = false,
             this.array = [],
             this.index = 0,
             this.array.push(this.datas[this.index]);
@@ -190,21 +191,16 @@ export default {
                     </div>
                 </div>
 
-                <!-- gameover -->
-                <div class="text-light" v-else-if="gameOver == true">
-                    <h1>Game Over</h1>
+                <div v-if="countCorrectAnswers == datas.length && gameOver == false">
+                    <h1>Bravissimo hai vinto!</h1>
 
-                    <div v-if="countCorrectAnswers == datas.length">
-                        <h1>Bravissimo hai vinto!</h1>
-                    </div>
+                    <button @click="restartGame()" class="btn btn-primary">Gioca di nuovo</button>
+                </div>
 
-                    <div v-else>
-                        <h1>Hai perso!</h1>
-                    </div>
+                <div v-else-if="gameOver == true">
+                    <h1>Hai perso!</h1>
 
-                    <button class="btn btn-primary" @click="restartGame()">
-                        Riprova
-                    </button>
+                    <button @click="restartGame()" class="btn btn-primary">Riprova</button>
                 </div>
             </div>
         </div>
