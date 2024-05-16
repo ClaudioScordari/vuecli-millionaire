@@ -182,8 +182,8 @@ export default {
                     <p class="borders fs-4 p-3">{{ oneData.question }}</p>
         
                     <div class="row">
-                        <div  class="col-md-6 col-sm-12">
-                            <div @click="checkAnswer(answer, oneData)" class="my-card borders p-2 m-2" v-for="answer in oneData.answers">    
+                        <div class="col-md-6 col-sm-12" v-for="answer in oneData.answers">
+                            <div @click="checkAnswer(answer, oneData)" class="my-card borders p-2 m-2">    
                                 {{ answer.text }}
                             </div>
                         </div>
