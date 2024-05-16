@@ -118,15 +118,13 @@ export default {
             index: 0,
             array: [],
             gameOver: false,
-            resultAnswer: false,
             countCorrectAnswers: 0
         }
     },
     mounted () {
-        // al caricamento della pagina ce il primo oggetto
+        // index al caricamento è 0
         this.array.push(this.datas[this.index]);
-        console.log(this.array);
-        console.log('----------------');
+        // console.log(this.array);
     },
     methods: {
         nextQuestion () {
@@ -134,7 +132,8 @@ export default {
             this.array.splice(0, 1);
 
             // adesso mettiamo nell'array l'indice successivo
-            this.index = this.index + 1; 
+            this.index += 1; 
+            console.log('L\'indice adesso è ' + this.index);
 
             if (this.index < this.datas.length) {
                 this.array.push(this.datas[this.index]);
@@ -143,31 +142,27 @@ export default {
         checkAnswer (oneData, answer) {
            if (oneData.correct_answer == answer.text) {
                 alert('Risposta esatta');
-                /* ------------------------ */
-                this.resultAnswer = true;
+
+                // counter risposte giuste
                 this.countCorrectAnswers++;
-                console.log(this.countCorrectAnswers);
-                /* ------------------------ */
+                console.log('Risposte corrette: ' + this.countCorrectAnswers);
+
+                // prossima domanda
                 this.nextQuestion();
-           } else {
+            } 
+            else {
                 alert('Risposta sbagliata');
-                /* ------------------------ */
-                this.countCorrectAnswers = 0;
                 this.gameOver = true;
-           } 
-        },
-        victory() {
-            if (this.countCorrectAnswers == this.datas.length) {
-                alert('Bravo, hai vinto Chi vuole essere milionario!');
-            }
+                this.array = [];
+            } 
         },
         restartGame(){
-            this.gameOver = false,
-            this.resultAnswer = false,
             this.countCorrectAnswers = 0,
-            this.nextQuestion();
+            this.array = [],
+            this.index = 0,
+            this.array.push(this.datas[this.index]);
             console.log(this.array);
-        }
+        },
     },
 }
 </script>
@@ -182,7 +177,7 @@ export default {
             </div>
 
             <div class="bg-down py-5" >
-                <div class='content container' v-for="oneData in array" v-if="gameOver == false">
+                <div class='content container' v-for="oneData in array" v-if="gameOver == false || array.length">
                     <p class="borders fs-4 p-3">{{ oneData.question }}</p>
         
                     <div class="row">
@@ -194,27 +189,20 @@ export default {
                     </div>
                 </div>
 
+                <!-- sconfitta -->
                 <div class="text-light" v-else>
                     <h1>Game Over</h1>
 
-                    <div>
-                        <button @click="restartGame()">
-                            Gioca di nuovo
-                        </button>
-                    </div>
+                    <button @click="restartGame()">
+                        Riprova
+                    </button>
                 </div>
 
+                <!-- vittoria -->
                 <div v-if="countCorrectAnswers == datas.length">
-                    <h1>Bravissimo hai vinto chi vuole essere miglionario</h1>
+                    <h1>Bravissimo hai vinto!</h1>
 
-                    <div>
-                        <button @click="restartGame()">
-                            Gioca di nuovo
-                        </button>
-                    </div>
-                </div>
-
-                <div>
+                   
                     <button @click="restartGame()">
                         Gioca di nuovo
                     </button>
