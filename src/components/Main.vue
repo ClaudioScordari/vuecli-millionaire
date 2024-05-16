@@ -139,8 +139,8 @@ export default {
                 this.array.push(this.datas[this.index]);
             }
         },
-        checkAnswer (oneData, answer) {
-           if (oneData.correct_answer == answer.text) {
+        checkAnswer (answer, oneData) {
+           if (answer.text == oneData.correct_answer) {
                 alert('Risposta esatta');
 
                 // counter risposte giuste
@@ -152,6 +152,7 @@ export default {
             } 
             else {
                 alert('Risposta sbagliata');
+
                 this.gameOver = true;
                 this.array = [];
             } 
@@ -161,7 +162,7 @@ export default {
             this.array = [],
             this.index = 0,
             this.array.push(this.datas[this.index]);
-            console.log(this.array);
+            // console.log(this.array);
         },
     },
 }
@@ -177,34 +178,32 @@ export default {
             </div>
 
             <div class="bg-down py-5" >
-                <div class='content container' v-for="oneData in array" v-if="gameOver == false || array.length">
+                <div class='content container' v-for="oneData in array" v-if="array.length">
                     <p class="borders fs-4 p-3">{{ oneData.question }}</p>
         
                     <div class="row">
                         <div  class="col-md-6 col-sm-12">
-                            <div @click="checkAnswer(oneData, answer)" class="my-card borders p-2 m-2" v-for="answer in oneData.answers">    
+                            <div @click="checkAnswer(answer, oneData)" class="my-card borders p-2 m-2" v-for="answer in oneData.answers">    
                                 {{ answer.text }}
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- sconfitta -->
-                <div class="text-light" v-else>
+                <!-- gameover -->
+                <div class="text-light" v-else-if="gameOver == true">
                     <h1>Game Over</h1>
 
-                    <button @click="restartGame()">
+                    <div v-if="countCorrectAnswers == datas.length">
+                        <h1>Bravissimo hai vinto!</h1>
+                    </div>
+
+                    <div v-else>
+                        <h1>Hai perso!</h1>
+                    </div>
+
+                    <button class="btn btn-primary" @click="restartGame()">
                         Riprova
-                    </button>
-                </div>
-
-                <!-- vittoria -->
-                <div v-if="countCorrectAnswers == datas.length">
-                    <h1>Bravissimo hai vinto!</h1>
-
-                   
-                    <button @click="restartGame()">
-                        Gioca di nuovo
                     </button>
                 </div>
             </div>
