@@ -124,7 +124,11 @@ export default {
     mounted () {
         // index al caricamento è 0
         this.array.push(this.datas[this.index]);
-        // console.log(this.array);
+
+        // tutte le risposte esatte
+        for (let i = 0; i < this.datas.length; i++) {
+            console.log(this.datas[i].correct_answer);
+        }
     },
     methods: {
         nextQuestion () {
@@ -133,8 +137,8 @@ export default {
 
             // adesso mettiamo nell'array l'indice successivo
             this.index += 1; 
-            console.log('L\'indice adesso è ' + this.index);
 
+            // se l'indice è minore dei dati, si può andare avanti
             if (this.index < this.datas.length) {
                 this.array.push(this.datas[this.index]);
             }
@@ -163,7 +167,6 @@ export default {
             this.array = [],
             this.index = 0,
             this.array.push(this.datas[this.index]);
-            // console.log(this.array);
         },
     },
 }
@@ -173,8 +176,8 @@ export default {
 
 <template>
     <div id="main-template" class="text-light">
-        <div class="my-box vh-100 text-center fw-bold">
-            <div class="bg-up py-5">
+        <div class="my-box text-center fw-bold">
+            <div class="bg-up py-3">
                 <img src="https://i.pinimg.com/474x/80/f3/e7/80f3e71a6ce9ab46b027423d056cef94.jpg">
             </div>
 
@@ -191,16 +194,18 @@ export default {
                     </div>
                 </div>
 
-                <div v-if="countCorrectAnswers == datas.length && gameOver == false">
-                    <h1>Bravissimo hai vinto!</h1>
+                <!-- win -->
+                <div v-if="countCorrectAnswers == datas.length && gameOver == false" class="py-5">
+                    <h1 class="mb-2">MILIONARIO!</h1>
 
-                    <button @click="restartGame()" class="btn btn-primary">Gioca di nuovo</button>
+                    <button @click="restartGame()" class="btn btn-primary">Gioca ancora</button>
                 </div>
 
-                <div v-else-if="gameOver == true">
-                    <h1>Hai perso!</h1>
+                <!-- game over -->
+                <div v-else-if="gameOver == true" class="py-5">
+                    <h1 class="mb-2 text-danger py-1">HAI PERSO!</h1>
 
-                    <button @click="restartGame()" class="btn btn-primary">Riprova</button>
+                    <button @click="restartGame()" class="d-inline-block btn btn-primary">Riprova</button>
                 </div>
             </div>
         </div>
